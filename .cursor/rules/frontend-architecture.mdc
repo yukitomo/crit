@@ -46,6 +46,7 @@ All custom JS uses the IIFE + dual-export pattern:
 | `crit-draft.js` | `window.crit.draft` | Autosave drafts to localStorage |
 | `crit-comment-templates.js` | `window.crit.commentTemplates` | Template bar + saved-snippet CRUD |
 | `crit-comment-form.js` | `window.crit.commentForm` | Shared comment form creation |
+| `crit-md-shortcuts.js` | `window.crit.mdShortcuts` | Markdown formatting shortcuts in comment textareas (Cmd/Ctrl+B/I/E/K) |
 | `crit-comment-card.js` | `window.crit.commentCard` | Comment card rendering + reply threading |
 | `crit-comment-card-helpers.js` | `window.crit.commentCardHelpers` | Author colors, timestamps, markdown rendering |
 | `crit-settings-overlay.js` | `window.crit.settingsOverlay` | Settings dialog lifecycle |
