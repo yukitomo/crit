@@ -35,6 +35,10 @@
       { id: 'delete_comment', binding: 'd', action: 'Delete comment on focused block', modes: CODE_REVIEW_ONLY },
       { id: 'general_comment', binding: 'Shift+G', action: 'General comment', modes: CODE_REVIEW_ONLY },
       { binding: 'Ctrl+Enter', action: 'Comment', modes: BOTH, fixed: true },
+      { binding: 'Cmd/Ctrl+B', action: 'Bold (while writing a comment)', modes: BOTH, fixed: true },
+      { binding: 'Cmd/Ctrl+I', action: 'Italic (while writing a comment)', modes: BOTH, fixed: true },
+      { binding: 'Cmd/Ctrl+E', action: 'Inline code (while writing a comment)', modes: BOTH, fixed: true },
+      { binding: 'Cmd/Ctrl+K', action: 'Link (while writing a comment)', modes: BOTH, fixed: true },
     ]},
     { label: 'Review', shortcuts: [
       { id: 'finish_review', binding: 'Shift+F', action: 'Finish review', modes: BOTH },

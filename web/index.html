@@ -400,6 +400,7 @@
         'crit-comment-card-helpers.js',
         'crit-comment-card.js',
         'crit-shortcuts.js',
+        'crit-md-shortcuts.js',
         'crit-settings-panes.js',
         'crit-settings-overlay.js',
         'crit-share.js',
@@ -507,6 +508,8 @@
       var cc = document.createElement('script'); cc.src = 'crit-comment-card.js'; cc.async = false; document.body.appendChild(cc);
       // Shared shortcut registry, persistence, and key normalization.
       var ks = document.createElement('script'); ks.src = 'crit-shortcuts.js'; ks.async = false; document.body.appendChild(ks);
+      // Markdown formatting shortcuts in comment textareas (Cmd/Ctrl+B/I/E/K).
+      var ms = document.createElement('script'); ms.src = 'crit-md-shortcuts.js'; ms.async = false; document.body.appendChild(ms);
       // Shared settings-overlay panes (Shortcuts + About). Must load before app.js.
       var sp = document.createElement('script'); sp.src = 'crit-settings-panes.js'; sp.async = false; document.body.appendChild(sp);
       // Optional boost for low-contrast syntax colours (window.crit.themeBoost).
