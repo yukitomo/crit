@@ -5363,6 +5363,8 @@
   }
 
   // ===== Comment Form =====
+  const DELETE_LINES_BODY = '削除';
+
   function createCommentFormUI(opts) {
     const formObj = opts.formObj;
 
@@ -5417,6 +5419,24 @@
     submitBtn.className = 'btn btn-sm btn-primary';
     submitBtn.textContent = opts.submitText;
     submitBtn.addEventListener('click', doSubmit);
+
+    // One-click "delete these lines" for a new line comment.
+    if (!opts.onSubmit && !formObj.editingId && formObj.scope !== 'file') {
+      const deleteLinesBtn = document.createElement('button');
+      deleteLinesBtn.className = 'btn btn-sm btn-delete-lines';
+      deleteLinesBtn.innerHTML = ICON_DELETE + ' 削除';
+      deleteLinesBtn.title = 'Comment "削除" on these lines';
+      deleteLinesBtn.addEventListener('click', async function() {
+        deleteLinesBtn.disabled = true;
+        submitBtn.disabled = true;
+        const comment = await submitComment(DELETE_LINES_BODY, formObj);
+        if (!comment) {
+          deleteLinesBtn.disabled = false;
+          submitBtn.disabled = false;
+        }
+      });
+      actions.appendChild(deleteLinesBtn);
+    }
 
     actions.appendChild(cancelBtn);
     actions.appendChild(submitBtn);

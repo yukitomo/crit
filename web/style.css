@@ -2350,6 +2350,12 @@ textarea.drag-active {
   margin-right: auto;
 }
 
+.btn-delete-lines svg {
+  width: 12px;
+  height: 12px;
+  vertical-align: -1px;
+}
+
 .comment-template-bar {
   display: flex;
   flex-wrap: wrap;
